@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 4 </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*Написать программу, которая запрашивает фамилии и месячные зарплаты 
+        двух сотрудников организации, а затем выводит выплаченную каждому из
+        них за год зарплату, их общую зарплату за год, а также их среднюю
+        месячную зарплату, округленную до большего целого числа. Данные о
+        каждом сотруднике хранить в отдельном объекте.
+        */
+        
+        let userFirst = {};
+        let userSecond = {};
+        let saloryYear;
+
+        userFirst.lastName = prompt('Введите фамилию первого сотрудника');
+        userFirst.saloryMonth = Number(prompt('Введите зарплату первого сотрудника'));
+
+        userSecond.lastName = prompt('Введите фамилию второго сотрудника');
+        userSecond.saloryMonth = Number(prompt('Ввкдите зарплату второго сотрудника'));
+        
+        userFirst.saloryYear = userFirst.saloryMonth * 12;
+        userSecond.saloryYear = userSecond.saloryMonth * 12;
+        saloryYear = userFirst.saloryYear + userSecond.saloryYear;
+
+        console.log(
+            'Выплаченная сумма за год  сотрудника:', userFirst.lastName,'=', userFirst.saloryYear,';',
+            'Выплаченная сумма за год сотрудника:', userSecond.lastName,'=', userSecond.saloryYear,';',
+            'Общая выплата за год', saloryYear,'.'
+        );
+        console.log('Средняя месячная зарплата, округленная до большего целого числа',
+            Math.ceil(saloryYear/12)
+        );
+    </script>
+</body>
+</html>

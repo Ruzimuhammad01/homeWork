@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 4 Homework</title>
+</head>
+<body>
+    <script>
+        /*Написать программу (скрипт), которая запрашивает у пользователя цену 1 кг
+        конфет, а также 1 кг печенья, а затем вычисляет стоимость: а) одной покупки из
+        300 г конфет и 400 г печенья; б) трех покупок, каждая из 2 кг печенья и 1 кг 
+        800 г конфет.*/
+        
+        let candy;
+        let cookie;
+        let priceCandy;
+        let priceCookie;
+        let a;
+        let b;
+
+        candy = prompt('Введите цену за 1 кг конфет');
+        cookie = prompt('Введите цену за 1 кг печенья');
+
+        {
+            priceCandy = candy * 0.3;
+            priceCookie = cookie * 0.4;
+
+            a = priceCandy + priceCookie;
+
+            console.log('Стоимость одной покупки из 300 г конфет и 400 г печенья', '=', a,'рублей');
+        }
+
+        {
+            priceCookie = cookie * 2;
+            priceCandy = candy * 1.8;
+
+            b = 3 * (priceCookie + priceCandy);
+
+            console.log('Стоимость трех покупок, каждая из 2 кг печенья и 1 кг 800 г конфет', '=', b,'рублей');
+        }
+        
+    </script>
+</body>
+</html>

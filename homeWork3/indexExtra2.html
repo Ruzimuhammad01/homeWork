@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 2 extra </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*Используя арифметические операции (+, -, *, /, %) для чисел, вычислить сумму 
+        и произведение цифр введенного пользователем четырехзначного числа.*/
+
+        let number = +prompt('Введите четырехзначное число');
+        let addition;
+        let multiplication;
+
+        let first = {};
+        first.b = number%1000;
+        first.c = (number - first.b)/1000;
+
+        let second = {};
+        second.b = first.b%100;
+        second.c = (first.b - second.b)/100;
+
+        let third = {};
+        third.b = second.b%10;
+        third.c = (second.b - third.b)/10;
+
+        addition = first.c + second.c + third.b + third.c;
+        multiplication = first.c * second.c * third.b * third.c;
+
+        console.log(`Сумма введенного четырехзначного числа = ${addition}`);
+        console.log(`Произведение введенного четырехзначного числа = ${multiplication}`);
+
+        //first.a = number/1000; //1.234
+        //console.log(`${first.a}, ${first.b}, ${first.c}`);
+        //second.a = first.b/100; //2.34
+        //console.log(`${second.a}, ${second.b}, ${second.c}`);
+        //third.a = second.b/10; //3.4
+        //console.log(`${third.a}, ${third.b}, ${third.c}`);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 2 extra</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*  
+            Написать программу (скрипт), которая запрашивает у пользователя сумму вклада в 
+            банк и годовой процент, а затем вычисляет сумму вклада через 5 лет при
+            ежегодном начислении процента на остаток суммы на вкладе.
+        */
+
+        //variable initialization
+        const years = 5;
+        let deposit;
+        let percent;
+        let sum;
+
+        //in value
+        deposit = prompt('Vvedite summu vklada');
+        percent = prompt('Vvedite procent (%)');
+
+        //Обработка данных
+        sum = deposit * (1 + percent / 100)**years;
+
+        //Ввывод полученных данных
+        console.log('суммa вклада через 5 лет = ', sum);
+
+        
+    </script>
+</body>
+</html>

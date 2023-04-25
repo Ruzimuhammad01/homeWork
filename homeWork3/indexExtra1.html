@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 1 extra </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*Из бруска, форма которого представляет собой прямую призму с квадратным основанием, 
+        выточили цилиндр. Вычислить, какой объем материала ушел в расход. 
+        Длину стороны квадрата и высоту призму вводит пользователь.
+        */
+
+        //const side = 4;
+        let expenditure;
+
+        let prism = {};
+        prism.length = +prompt('Введите длину стороны квадрата (в сантиметрах)');
+        prism.height = +prompt('Введите высоту призмы (в сантиметрах)');
+        prism.squareArea = Math.pow(prism.length, 2);
+        prism.volume = prism.squareArea * prism.height;
+        
+        let cylinder = {};
+        cylinder.diameter = prism.length;
+        cylinder.height = prism.height;
+        cylinder.area = Math.pow(cylinder.diameter,2) / 4 * Math.PI;
+        cylinder.volume = cylinder.area * cylinder.height;
+
+        expenditure = prism.volume - cylinder.volume;
+
+        console.log(`${expenditure.toFixed(3)} см**2 объем материала ушел в расход`);
+        
+        /*console.log(`Длинa стороны квадрата (в сантиметрах): ${prism.length};`);
+        console.log(`Высотa призмы (в сантиметрах): ${prism.height};`);
+        console.log(`Площадь бруска = ${prism.volume}см**2;`);
+        console.log(`Площадь цилиндра = ${cylinder.volume}см**2;`);
+        */
+    </script>
+</body>
+</html>

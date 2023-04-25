@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 2 </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*Написать программу, которая запрашивает у пользователя действительное
+        число а. Не пользуясь никакими другими арифметическими операциями,
+        кроме умножения, получить а**12 за шесть операций.*/
+        // a*a * a*a * a*a * a*a * a*a * a*a
+
+        let a = +prompt('Введите действительное число а')
+        //
+        let object = {};
+        object.b = a * a;
+        object.c = object.b * object.b * object.b * object.b * object.b * object.b;
+
+        console.log(`а**12 за шесть операций при a = ${a}: ===> ${object.c}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 3 </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*
+         Написать программу, которая запрашивает число, месяц и год, затем
+         сохраняет введенные значения в виде объекта, а затем, используя
+         данные из объекта, выводит число, соответствующее дню недели в
+         JavaScript, в консоль.
+        */
+        //Запрашивание и введение числа, месяца и года;
+        let objectDate = {};
+            objectDate.day = prompt('Введите дату месяца');
+            objectDate.month = prompt('Введите месяц');
+            objectDate.year = prompt('Введите год');
+
+        let dayofWeek;
+
+        //Создание новой даты
+        let myDate = new Date(objectDate.year, objectDate.month - 1, 
+        objectDate.day);
+        console.log(myDate);
+
+        //Вычисление дня недели
+        dayofWeek = myDate.getDay();
+
+        //Вывод данных
+        console.log('День недели в JavaScript -', dayofWeek,
+        '(При 0 - это воскресенье)');
+
+    </script>
+</body>
+</html>
