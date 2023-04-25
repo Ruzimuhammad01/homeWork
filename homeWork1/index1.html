@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 1 Homework</title>
+</head>
+<body>
+    <script>
+        //Написать программу (скрипт), вычисляющую площадь круга по введенному
+        //пользователем радиусу. Число π описать константой.
+        //D=2R C=2piR C=piD S=piR*2
+        
+        const PI = 3.14;
+        let surfaceArea;
+        let radius;
+
+        radius = prompt('Введите радиус окружности (см)');
+
+        
+        surfaceArea = PI * radius ** 2;
+
+        console.log('При радиусе =', radius, 'см;', 'Площадь круга =', surfaceArea, 'см2');
+    </script>
+</body>
+</html> 

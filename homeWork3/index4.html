@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 4 </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*В квадратной комнате шириной w и высотой потолка h есть дверь и 
+        несколько одинаковых окон. Вычислить площадь стен для оклеивания их 
+        обоями. Размеры комнаты (w и h), размеры двери и окна, а также
+        количество окон вводятся пользователем.*/
+
+        const side = 4;
+        let squareWallpaper;
+
+        let room = {};
+        room.width = +prompt('Введите ширину комнаты (в сантиметрах)');
+        room.height = +prompt('Введите высоту потолка (в сантиметрах)');
+
+        let door = {};
+        door.width = +prompt('Введите ширину двери (в сантиметрах)');
+        door.height = +prompt('Введите высоту двери (в сантиметрах)');
+
+        let windows = {};
+        windows.width = +prompt('Введите ширину окна (в сантиметрах)');
+        windows.height = +prompt('Введите высоту окна (в сантиметрах)');
+        windows.amount = +prompt('Введите количество окон');
+
+        let square = {};
+        square.room = room.width * room.height * side;
+        square.door = door.width * door.height;
+        square.window = windows.width * windows.height * windows.amount;
+
+        squareWallpaper = square.room - (square.door + square.window);
+
+        console.log(`Площадь стен для оклеивания их обоями = ${squareWallpaper} см**2`);
+
+        /*
+            console.log(
+                'Ширина комнаты (в сантиметрах)', room.width,';',
+                'Высота потолка (в сантиметрах)', room.height,';',
+                'Ширина двери (в сантиметрах)', door.width,';',
+                'Высота двери (в сантиметрах)', door.height,';',
+                'Ширина окна (в сантиметрах)', windows.width,';',
+                'Высота окна (в сантиметрах)', windows.height,';',
+                'количество окон', windows.amount,';'
+            )
+            Ширина комнаты (в сантиметрах) 4000 ; Высота потолка (в сантиметрах) 3000 ;
+            Ширина двери (в сантиметрах) 1000 ; Высота двери (в сантиметрах) 2000 ;
+            Ширина окна (в сантиметрах) 1500 ; Высота окна (в сантиметрах) 1500 ;
+            количество окон 3 ; Площадь стен для оклеивания их обоями = 39250000см**2; 
+        */
+    </script>
+</body>
+</html>

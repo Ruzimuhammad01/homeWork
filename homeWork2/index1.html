@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 1 </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*Написать программу, которая для двух введенных пользователем натуральных
+        чисел выдает их сумму, произведение, разность первого и второго чисел, частное
+        от деления первого числа на второе, остаток от деления первого числа на второе.
+        Результат, разумеется, может оказаться и вещественным числом. Дополнительно
+        вывести тип данных введенных пользователем значений сразу после ввода и
+        после преобразования к числам. Результаты вывести в консоль. */
+
+        let numberA = prompt('Введите первое число');
+        numberA = Number(numberA);
+        let numberB = prompt('Введите второе число');
+        numberB = Number(numberB);
+
+        console.log(typeof numberA);
+        console.log(typeof numberB);
+
+        let operation = {};
+        operation.sum = numberA + numberB;
+        operation.multiplication = numberA * numberB;
+        operation.subtraction = Math.max(numberA, numberB) - Math.min(numberA, numberB);
+        //Думаю использование мин/макс здесь не уместны из за определения, но все же))
+        operation.division = numberA / numberB;
+        operation.remainder = numberA % numberB;
+
+        console.log('Сумма введенных чисел =', operation.sum,';');
+        console.log('Произведение =', operation.multiplication,';');
+        console.log('Разность чисел =', operation.subtraction,';');
+        console.log('Частное от деления =', operation.division,';');
+        console.log('Остаток от деления =', operation.remainder,';');
+        
+        /*console.log(
+            'Сумма введенных чисел =', operation.sum, ';',
+            'Произведение =', operation.multiplication, ';',
+            'Разность чисел =', operation.subtraction, ';',
+            'Частное от деления =', operation.division, ';',
+            'Остаток от деления =', operation.remainder,';'
+        )*/
+    </script>
+</body>
+</html>

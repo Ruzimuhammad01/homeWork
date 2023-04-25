@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 1 Extra </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /* Написать программу, которая запрашивает два вещественных числа
+        a и b, а затем генерирует случайное число из полуинтервала [a; b).
+        Вводимые пользователем числа могут быть, в том числе, и отрицательными.
+        Результаты вывести в консоль. */
+
+        /*let objectNumber = {};
+        objectNumber.
+        objectNumber.*/
+
+        const firstNumber = prompt('Введите первое вещественное число');
+        const secondNumber = prompt('Введите второе вещественное число');
+
+        const maxNumber = Math.max(firstNumber, secondNumber);
+        const minNumber = Math.min(firstNumber, secondNumber);
+        const randomNumber = Math.random() * (maxNumber - minNumber) + minNumber;
+
+        console.log('Случайное число из полуинтервала', randomNumber);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 2 Extra </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /* Написать программу, которая запрашивает вещественное число x и
+        выводит в консоль значение выражения:  sin x − exp(−x) + x**2 − ln |x|
+        Обратите внимание на результат при x = 0.  */
+
+        let x = prompt('Введите вещественное число x', 0);
+        x = Number(x);
+        let value;
+        console.log('Вещественное число =', x);
+
+        value = Math.sin(x) - Math.exp(-x) + Math.pow(x, 2) - Math.log(Math.abs(x));
+
+        console.log('Значение выражения =', value);
+    </script>
+</body>
+</html>

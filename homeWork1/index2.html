@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 2 Homework</title>
+</head>
+<body>
+    <script>
+        /*Написать программу (скрипт), осуществляющую перевод значения, 
+        введенного пользователем в дюймах, в миллиметры и сантиметры.*/
+        //1 inch = 2,54centimeter =25,4millimeter
+        
+        //Описание констант и переменных
+        const inch = 2.54;
+        let userInch;
+        let millimeter;
+        let centimeter;
+        
+        //Ввод исходных данных
+        userInch = prompt('Введите значения в дюймах');
+
+        //Обработка данных
+        centimeter = userInch * inch;
+        millimeter = userInch * inch * 10;
+
+        //Ввывод полученных данных
+        console.log(userInch, 'дюйм', '=', centimeter, 'см');
+        console.log(userInch, 'дюйм', '=', millimeter, 'мм');
+        
+    </script>
+</body>
+</html> 

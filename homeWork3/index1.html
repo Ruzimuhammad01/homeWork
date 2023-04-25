@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Case 1 </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*Написать программу, которая запрашивает у пользователя длину окружности
+        и находит радиус этой окружности, площадь круга, ограниченного этой
+        окружностью, сторону квадрата, площадь которого равна найденной площади круга.
+        */
+        
+        let circumference = +prompt('Введите длину окружности:');
+        let radius;
+        let area;
+        let sideSquare;
+
+        radius = circumference / (2 * Math.PI);
+        area = Math.pow(radius, 2) * Math.PI;
+        sideSquare = Math.sqrt(area);//
+
+        console.log(`Радиус окружности = ${radius.toFixed(3)};`);
+        console.log(`Площадь круга = ${area.toFixed(3)};`);
+        console.log(`Сторона квадрата = ${sideSquare.toFixed(3)};`);
+
+    </script>
+</body>
+</html>
