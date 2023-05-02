@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Primer 1 </title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*Найти периметр и площадь треуольника
+        p = a+b+c, pp = p/2, 
+        Math.sqrt(pp * (pp-a) * (pp-b) * (pp-c))*/
+        /*let perimeter;
+        let area;
+        let pp;
+
+        const a = +prompt('Введите сторону a', 10);
+        const b = +prompt('Введите сторону b', 15);
+        const c = +prompt('Введите сторону c', 20);
+
+        perimeter = a + b + c;
+        pp = perimeter/2;
+
+        area = Math.sqrt(pp * (pp-a) * (pp-b) * (pp-c));
+
+        console.log('Периметр =', perimeter);
+        console.log('Площадь =', area);
+        */
+        const number = +prompt('Введите число', 1234);
+        let firstNumber;
+        let secondNumber;
+
+        firstNumber = Math.floor(number/1000);
+        secondNumber = (number%10);
+        
+        console.log('Сумма = ', firstNumber + secondNumber);
+        console.log('Произведение', firstNumber * secondNumber);
+        console.log('Целая часть', Math.floor(firstNumber/secondNumber));
+        console.log('Остаток от деления', firstNumber%secondNumber);
+
+        
+    </script>
+</body>
+</html>
