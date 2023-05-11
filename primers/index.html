@@ -28,7 +28,7 @@
         console.log('Периметр =', perimeter);
         console.log('Площадь =', area);
         */
-        const number = +prompt('Введите число', 1234);
+        /*const number = +prompt('Введите число', 1234);
         let firstNumber;
         let secondNumber;
 
@@ -39,7 +39,38 @@
         console.log('Произведение', firstNumber * secondNumber);
         console.log('Целая часть', Math.floor(firstNumber/secondNumber));
         console.log('Остаток от деления', firstNumber%secondNumber);
+        */
+        /*const R = +prompt('Введите больший радиус конуса', 10);
+        const r = +prompt('Введите меньший радиус конуса', 5);
+        const h = R + r;
+        const PI = Math.PI;
+        let s, s1, s2, s3, v, l;
 
+        s1 = PI * R**2;
+        s2 = PI * r**2;
+        l = Math.sqrt(h**2 + (R-r)**2);
+        s3 = PI * (r + R) * l;
+        s = s1 + s2 + s3;
+        v = 1/3 * h * (s1 + s2 + Math.sqrt(s1*s2));
+
+        console.log(`Площадь усеченного конуса = ${s}`);
+        console.log(`Объем усеченного конуса = ${v}`);
+        */
+        if (resultDateFirst.getDate() > 13){
+            resultDateFirst.setMonth(resultDateFirst.getMonth() + 1);
+        }
+        resultDateFirst.setDate(13);
+
+        while (resultDateFirst <= resultDateSecond){
+            if (resultDateFirst.getDay() == 5) {
+                console.log(resultDateFirst);
+                dateExists = true;
+            }
+            resultDateFirst.setMonth(resultDateFirst.getMonth() + 1);
+        }
+        if (!dateExists) {
+            console.log("В указанном диапазоне дат нет пятниц 13");
+        }
         
     </script>
 </body>
