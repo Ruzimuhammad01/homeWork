@@ -9,8 +9,55 @@
 <body>
     <script>
         'use strict';
-        /**/
+        /*Пользователь вводит число, операцию (сложение (+), вычитание (-),
+        умножение (*) или деление (/)) и второе число. Вывести результат
+        введенного действия над числами в консоль. Осуществить проверку
+        корректности ввода данных.*/
+
+        let firstNumber = prompt("Введите первое число", 2);
+
+        if (firstNumber === null) {
+            console.log('Вы отказались от дальнейших вычислений!');
+        } else if (firstNumber == 'null') {
+            console.log('Вы ввели нечисловое значение!');
+        } else if (firstNumber.trim == ' ') {
+            console.log('Вы ничего не ввели!')
+        }
+
+        // console.log(typeof firstNumber);
+        let first = Number(firstNumber);
+        // console.log(typeof first);
+
+        let operation =  prompt("Введите операцию (сложение (+), вычитание (-), умножение (*) или деление (/))", '+');
         
+        if (operation === null) console.log('Вы отказались от дальнейших вычислений!');
+        // } else if (operation == 'null') {
+        //     console.log('Вы ввели нечисловое значение!');
+        // } else if (operation.trim == ' ') {
+        //     console.log('Вы ничего не ввели!')
+        // }
+
+        let secondNumber = prompt("Введите второе число", 3);
+
+        if (secondNumber === null) {
+            console.log('Вы отказались от дальнейших вычислений!');
+        } else if (secondNumber == 'null') {
+            console.log('Вы ввели нечисловое значение!');
+        } else if (secondNumber.trim == ' ') {
+            console.log('Вы ничего не ввели!')
+        }
+        
+        let second = Number(secondNumber);
+
+        if (operation === '+') {
+            console.log(first + second)
+        } else if (operation === '-') {
+            console.log(first - second)
+        }  else if (operation === '*') {
+            console.log(first * second)
+        } else if (operation === '/') {
+            console.log(first / second)
+        }
     </script>
 </body>
 </html>
