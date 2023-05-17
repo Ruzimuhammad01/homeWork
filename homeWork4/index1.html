@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta nameMonth="viewport" content="width=device-width, initial-scale=1.0">
     <title> Case 1 </title>
 </head>
 <body>
@@ -28,6 +28,7 @@
         // console.log(typeof month);
         
         // Ввод переменных
+        let nameMonth;
         const month = prompt('Введите номер месяца (от 1 до 12)');
                 
         // Обработка кнопок на нажатие отмены/пустого значения
@@ -37,22 +38,67 @@
             console.log('Вы ничего не ввели!');
         } else if (isNaN(Number(month))) {
             console.log('Вы ввели нечисловое значение!');
-        } else if (month == 1) console.log("Январь");
-            else if (month == 2) console.log("Февраль");
-            else if (month == 3) console.log("Март");
-            else if (month == 4) console.log("Апрель");
-            else if (month == 5) console.log("Май");
-            else if (month == 6) console.log("Июнь");
-            else if (month == 7) console.log("Июль");
-            else if (month == 8) console.log("Август");
-            else if (month == 9) console.log("Сентябрь");
-            else if (month == 10) console.log("Октябрь");
-            else if (month == 11) console.log("Ноябрь");
-            else if (month == 12) console.log("Декабрь");
-            else if (month < 1 || month > 12)
-                console.log("Номер месяца не входит в интервал от 1 до 12!");
-            else if (!Number.isInteger(month))
-                console.log('Вы ввели дробное значение!');
+        } else {
+            nameMonth = Number(month);
+            switch (nameMonth) {
+                case 1:
+                    console.log("Январь");
+                    break;
+                case 2:
+                    console.log("Февраль");
+                    break;
+                case 3:
+                    console.log("Март");
+                    break;
+                case 4:
+                    console.log("Апрель");
+                    break;
+                case 5:
+                    console.log("Май");
+                    break;
+                case 6:
+                    console.log("Июнь");
+                    break;
+                case 7:
+                    console.log("Июль");
+                    break;
+                case 8:
+                    console.log("Август");
+                    break;
+                case 9:
+                    console.log("Сентябрь");
+                    break;
+                case 10:
+                    console.log("Октябрь");
+                    break;
+                case 11:
+                    console.log("ФеврНоябрьаль");
+                    break;
+                case 12:
+                    console.log("Декабрь");
+                    break;
+                default:
+                    console.log("Не найдено");
+            };
+            // console.log(`${month} ${nameMonth}`);
+        };
+        
+        // if (month == 1) console.log("Январь");
+        //     else if (month == 2) console.log("Февраль");
+        //     else if (month == 3) console.log("Март");
+        //     else if (month == 4) console.log("Апрель");
+        //     else if (month == 5) console.log("Май");
+        //     else if (month == 6) console.log("Июнь");
+        //     else if (month == 7) console.log("Июль");
+        //     else if (month == 8) console.log("Август");
+        //     else if (month == 9) console.log("Сентябрь");
+        //     else if (month == 10) console.log("Октябрь");
+        //     else if (month == 11) console.log("Ноябрь");
+        //     else if (month == 12) console.log("Декабрь");
+        //     else if (month < 1 || month > 12)
+        //         console.log("Номер месяца не входит в интервал от 1 до 12!");
+        //     else if (!Number.isInteger(month))
+        //         console.log('Вы ввели дробное значение!');
 
     </script>
 </body>
