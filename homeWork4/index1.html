@@ -13,10 +13,6 @@
         Номер месяца вводит пользователь (от 1 до 12). Сразу после ввода исходных
         данных осуществить проверку корректности ввода и, в случае ввода 
         некорректных данных, вывести сообщение об ошибке в консоль.*/
-        
-        // Ввод переменных
-        const month = prompt('Введите номер месяца (от 1 до 12)')
-        
 
         // let message = (month < 1) ? ('Номер месяца ввели не верно!'):
         //               (month > 12) ? ('Номер месяца ввели не верно!'):
@@ -28,34 +24,35 @@
         // console.log(typeof month);
 
         // Проверка на дробные части ввода данных
-        Number.isInteger(month);
+        // Number.isInteger(month);
         // console.log(typeof month);
         
-
+        // Ввод переменных
+        const month = prompt('Введите номер месяца (от 1 до 12)');
+                
         // Обработка кнопок на нажатие отмены/пустого значения
-        if (month === null) {
+        if (month == null) {
             console.log('Вы отказались от дальнейших вычислений!');
-        } else if (month == 'null') {
-            console.log('Вы ввели нечисловое значение!');
-        } else if (month.trim() == ' ') {
+        } else if (month.trim() == '') {
             console.log('Вы ничего не ввели!');
-        }
-
-        if (month == 1) { console.log("Январь");
-        } else if (month == 2) { console.log("Февраль");
-        } else if (month == 3) { console.log("Март");
-        } else if (month == 4) { console.log("Апрель");
-        } else if (month == 5) { console.log("Май");
-        } else if (month == 6) { console.log("Июнь");
-        } else if (month == 7) { console.log("Июль");
-        } else if (month == 8) { console.log("Август");
-        } else if (month == 9) { console.log("Сентябрь");
-        } else if (month == 10) { console.log("Октябрь");
-        } else if (month == 11) { console.log("Ноябрь");
-        } else if (month == 12) { console.log("Декабрь");
-        } else if (month < 1 && month > 12){
-            console.log("Номер месяца ввели не верно!"); //при отказе выводится 54 строка
-        }
+        } else if (isNaN(Number(month))) {
+            console.log('Вы ввели нечисловое значение!');
+        } else if (month == 1) console.log("Январь");
+            else if (month == 2) console.log("Февраль");
+            else if (month == 3) console.log("Март");
+            else if (month == 4) console.log("Апрель");
+            else if (month == 5) console.log("Май");
+            else if (month == 6) console.log("Июнь");
+            else if (month == 7) console.log("Июль");
+            else if (month == 8) console.log("Август");
+            else if (month == 9) console.log("Сентябрь");
+            else if (month == 10) console.log("Октябрь");
+            else if (month == 11) console.log("Ноябрь");
+            else if (month == 12) console.log("Декабрь");
+            else if (month < 1 || month > 12)
+                console.log("Номер месяца не входит в интервал от 1 до 12!");
+            else if (!Number.isInteger(month))
+                console.log('Вы ввели дробное значение!');
 
     </script>
 </body>
