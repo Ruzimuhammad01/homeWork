@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+		'use strict'
+		// example 1 -------------------------------------------
+		// Вывод четных чисел. Цикл с предусловием
+		
+		// let n = +prompt('Введите число');
+		// let x = 1;
+		
+		// while (x <= n) {
+		// 	if (x%2 == 0) {
+		// 		console.log(x);
+		// 	}
+		// 	x++;
+		// }
+
+
+		// example 2 -------------------------------------------
+		// Факториал. Цикл с предусловием
+
+		// let n = +prompt('Введите число');
+		// let factorial = 1;
+		// let i = 1
+
+		// while (i <= n) {
+		// 	factorial *= i;
+		// 	i++;
+		// }
+
+		// console.log(factorial);
+
+
+		// example 3 -------------------------------------------
+		// Вывод четных чисел. Цикл с постусловием
+
+		// let n = +prompt('Введите число');
+		// let x = 1;
+		
+		// do {
+		// 	if (x%2 == 0) console.log(x);
+		// 	x++;
+		// } while (x <= n)
+
+
+		// example 4 -------------------------------------------
+		// Факториал. Цикл с постусловием
+
+		// let n = +prompt('Введите число');
+		// let factorial = 1;
+		// let i = 1
+
+		// do {
+		// 	factorial *= i;
+		// 	i++;
+		// } while (i <= n)
+
+		// console.log(factorial);
+
+
+		// example 5-1 -------------------------------------------
+		// Вывод четных чисел. Цикл со счетчиком
+
+		// let n = +prompt('Введите число');
+		
+		// for (let i = 1; i <= n; i++) {
+		// 	if (i%2 == 0) console.log(i);
+		// }
+
+
+		// example 5-2 -------------------------------------------
+		// Вывод четных чисел. Цикл со счетчиком с шагом 2
+
+		// let n = +prompt('Введите число');
+		
+		// for (let i = 2; i <= n; i += 2) console.log(i);
+
+
+		// example 6 ---------------------------------------------
+		// Факториал. Цикл со счетчиком
+		
+		// let n = +prompt('Введите число');
+		// let factorial = 1;
+
+		// for (let i = 1; i <= n; i++) factorial *= i;
+
+		// console.log(factorial);
+
+		
+		// example 7 ---------------------------------------------
+		// Суммирование чисел, пока сумма не превзойдет 10
+
+		// let sum = 0;
+
+		// while (true) {
+		// 	let value = +prompt('Введите число');
+		// 	if (!value) continue;
+		// 	sum += value;
+		// 	if (sum > 10) break;
+		// }
+
+		// console.log(sum);
+
+
+		// example 8 ---------------------------------------------
+		// Всевозможные тройки чисел в указанных диапазонах
+
+		// for (let i = 1; i <= 10; i++) {
+		// 	for (let j = 1; j<= 10; j++) {
+		// 		for (let k = 1; k <= 2; k++) {
+		// 			console.log(`(${i}; ${j}; ${k})`);
+		// 		}
+		// 	}
+		// }
+
+
+		// example 9 ---------------------------------------------
+		// Вычисление суммы первых членов числовой последовательности
+		// с проверкой корректности введенных данных
+
+		// let epsilon;
+		// let k = 1;
+		// let ak;
+		// let s = 0;
+		
+		// while (true) {
+		// 	epsilon = prompt('Введите epsilon');
+			
+		// 	if (epsilon == null) {
+		// 		console.log('Вы прервали выполнение программы');
+		// 		break;
+		// 	}
+
+		// 	if (epsilon.trim() == '' || isNaN(epsilon)) {
+		// 		console.log('Вы не ввели число');
+		// 		continue;
+		// 	}
+
+		// 	epsilon = +epsilon;
+		// 	if (epsilon <= 0 || epsilon >= 1) console.log('Число не из диапазона');
+		// 	else break;
+		// }
+
+		// if (epsilon != null) {
+		// 	ak =  4*k / (k**2 + 8*Math.sqrt(k));
+			
+		// 	while (ak >= epsilon) {
+		// 		s += ak;
+		// 		k++;
+		// 		ak = 4*k / (k**2 + 8*Math.sqrt(k));
+		// 	}
+
+		// 	console.log(s);
+		// }
+    </script>
+  </body>
+</html>
