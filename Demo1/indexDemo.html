@@ -14,9 +14,102 @@
         то есть получить матрицу Е.
         Напечатать матрицы D, E 
         */
-        
-        // 
+       // let arrayC = [  [3, 4, 8],
+        //                 [4, 5, 6],
+        //                 [3, 2, 1],
+        //                 [1, 5, 7],
+        //                 [7, 0, 2],
+        //                 [6, 1, 9],
+        // ];
 
+        // Обьявление матрицы С(М, 2М)
+        let arrayC = [  [3, 43, 34, 1, 4, 15, 22, 1],
+                        [4, 5, 6, 75, 0, 235, 255, 11],
+                        [3, 21, 103, 4, 8, 18, 0, 10],
+                        [11, 45, 77, 81, 19, 24, 12, 98],
+                        [67, 15, 22, 13, 67, 56, 100, 101],
+                        [56, 1, 9, 12, 4, 35, 128, 127],
+                        [89, 94, 112, 132, 176, 111, 110, 12],
+                        [154, 45, 3, 200, 205, 212, 241, 1],
+        ];
+
+        // Обявление переменных для правой и левой половины элементов матрицы "С(М, 2М)"
+        let rightPart = 0;
+        let leftPart = rightPart;
+
+        //Цикл для перебора значений 
+        for (let j = 0; j < arrayC[0].length; j++) {
+            for (let i = 0; i < arrayC.length; i++) {
+                if (i < arrayC.length / 2) {
+                    rightPart *= arrayC[i][j];
+                } else {
+                    leftPart *= arrayC[i][j];
+                }
+            }
+        }
+        // console.log('Матрица arrayC:');
+        // console.log(arrayC);
+
+        // Определяем в какой из половин (правой/левой) сумма всех элементов больше, чем в другой
+        
+        if (rightPart > leftPart) {
+            console.log('Произведение в правой части элементов матрицы больше, чем в левой');
+        } else if (rightPart < leftPart) {
+            console.log('Произведение в левой части элементов матрицы больше, чем в правой');
+        } else console.log('Произведение в левой и в правой части элементов матрицы равны');
+
+        //Создание масивов для хранения правой и левой части матрицы "С"
+        let rightArrayC = [];
+        let leftArrayC = [];
+
+        //Перебираем строки в матрицы "С", и в зависимости от того, в какой части матрицы они находятся
+        //вносим их в массивы "leftArrayC" и "rightArrayC"
+        for (let i = 0; i < arrayC.length; i++) {
+            if (i < arrayC.length / 2) {
+                rightArrayC.push(arrayC[i]);
+            } else {
+                leftArrayC.push(arrayC[i]);
+            }
+        }
+
+        //Составление матрицы "D(M, M)" из произведений соответствующих элементов половин матрицы "С".
+        let arrayD = [];
+        for (let i = 0; i < rightArrayC.length; i++) {
+            arrayD[i] = [];
+            for (let j = 0; j < rightArrayC[0].length; j++) {
+                arrayD[i][j] = rightArrayC[i][j] + leftArrayC[i][j];
+            }
+        }
+
+        //Расположим в матрице D элементы стоящие на побочной диагонали в порядке возрастания,
+        //то есть получаем матрицу Е.
+        let arrayE = [];
+        for (let i = 0; i < arrayD.length; i++) {
+            arrayE[i] = [];
+            for (let j = 0; j < arrayD[i].length; j++) {
+                arrayE[i][j] = arrayD[i][j];
+            }
+        }
+        // console.log(arrayE);
+
+        //Используем метод вставки для сортировки марицы "arrayE"
+        for (let j = 0; j < arrayE[0].length; j++) {
+            for (let i = 0; i < arrayE.length; i++) {
+                let current = arrayE[i][j];
+                let k = i - 1;
+                while (k >= 0 && arrayE[k][j] > current) {
+                    arrayE[k + 1][j] = arrayE[k][j];
+                    k--;
+                }
+                arrayE[k + 1][j] = current;
+            }
+        }
+
+        //Вывод матрицы D, E в консоль:
+        console.log('Матрица D: ');
+        console.log(arrayD);
+        console.log('Матрица E: ');
+        console.log(arrayE);
 
     </script>
 </body>
